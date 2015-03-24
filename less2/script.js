@@ -87,3 +87,50 @@ while (o<fruitAndVeg.length){
 }
 
 console.log(noVeg);
+
+//object
+
+var message="it's cold today";
+console.log(message.length);
+console.log(message.toUpperCase());
+
+// creating my own objec
+
+//var object={
+  //propertyName: propertyValue,
+  //methodName: function(){
+    //method definition
+//  },
+//}
+
+//object is London
+
+var london={
+  name:"London",
+  population: 8308369,
+  tallestBuilding:{
+    name:"Shard",
+    height: '310m'
+  },
+  numberUniversities: 43,
+  averageRent: 1106,
+  dailyTubePassengerJourney: 3500000,
+  olympics:[ 1908, 1948, 2012],
+  updatePopulation: function(newPopulation){
+    this.population=newPopulation;
+  }
+};
+
+console.log("Population of London: "+london.population);
+console.log("The tallest building in London is "+london.tallestBuilding.name+"with a height of"+london.tallestBuilding.height);
+
+
+var i;
+console.log("The olympics took place in London in: \n");
+for (i=0; i<london.olympics.length;i++){
+  console.log(london.olympics[i]);
+}
+
+console.log("Population before update: "+london.population);
+london.updatePopulation(84000000);
+console.log("Population after update: "+london.population);
